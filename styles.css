@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+header {
+    background-color: #004d00; /* Dunkelgrün */
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#hero {
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+#hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 77, 0, 0.5); /* Dunkelgrün mit Transparenz */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+section {
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+footer {
+    background-color: #004d00; /* Dunkelgrün */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#timer {
+    margin-bottom: 20px;
+}
+
+#reviews {
+    margin-top: 20px;
+}
