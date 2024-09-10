@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licht.Blick.Moment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Cormorant SC', serif;
+            background-color: #FFFFFF;
+            display: flex;
+            flex-direction: row;
+            scroll-behavior: smooth;
+        }
+        .header {
+            background-color: #31453C;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        .hero {
+            background: url('/Users/katja/Desktop/Website/Bilder für Website/ich august erste bearbeitung 6-1.jpg') no-repeat center center/cover;
+            height: 100vh; /* Full viewport height */
+            color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding-top: 150px; /* Extra space to push content further down */
+        }
+        .hero img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .hero h1 {
+            font-family: 'Cormorant SC', serif;
+            font-size: 3em; /* Larger font size for better visibility */
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            color: #000000;
+            background: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+            border-radius: 10px;
+            position: absolute;
+            bottom: 250px; /* Adjusted for more space */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        .hero button {
+            background-color: #31453C;
+            color: #FFFFFF;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 150px; /* Adjusted to be below the quote */
+        }
+        .timer {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.2em;
+            color: #31453C;
+        }
+        .section {
+            padding: 20px;
+            color: #31453C;
+            margin-left: 220px; /* Adjusted for sidebar width */
+        }
+        .section h2 {
+            font-family: 'Cormorant SC', serif;
+            font-size: 2.5em;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #CCC;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background-color: #31453C;
+            color: #FFFFFF;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .sidebar {
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 200px;
+            background-color: #31453C;
+            color: #FFFFFF;
+            height: 100vh;
+            padding-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 1000;
+        }
+        .sidebar img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+        .sidebar nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .sidebar a {
+            color: #FFFFFF;
+            text-decoration: none;
+            margin: 15px 0;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 1.2em;
+        }
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+        .hidden {
+            display: none;
+        }
+        .section-content {
+            margin-top: 40px;
+        }
+        .section-content p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <img src="path_to_profile_image.jpg" alt="Profilbild">
+        <nav>
+            <a href="#about">Über mich</a>
+            <a href="#workflow">Meine Arbeitsweise</a>
+            <a href="#portfolio">Mein Portfolio</a>
+            <a href="#contact">Kontakt</a>
+        </nav>
+    </aside>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Licht.Blick.Moment</h1>
+        <p>deine Geschichte - unsere Kunst</p>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="path_to_your_large_image.jpg" alt="Großes Bild von mir">
+        <h1>Da ich den Wert der Zeit kenne, ist es mir besonders wichtig, die schönsten Momente zu verewigen und dein Leuchten hervorzuheben.</h1>
+        <button>Jetzt Termin Buchen</button>
+    </section>
+
+    <!-- Timer Section -->
+    <section class="timer">
+        <p>Seit dem 11. September 2014 fotografiere ich</p>
+        <p id="timer"></p>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="section hidden">
+        <h2>Über mich</h2>
+        <div class="section-content">
+            <p>Mir ist es wichtig; ehrlich und authentisch zu sein. Jeder Mensch ist einzigartig, und sollte sich nicht für andere verbiegen oder verstellen müssen. Auch fotografisch suche ich nach dieser Ehrlichkeit, und feiere echte Gänsehautmomente im Leben. Bei mir dürft ihr nicht nur, sondern sollt auch ganz ihr selbst sein.</p>
+            <ul>
+                <li>• Im September 1996, in Waidhofen an der Thaya geboren</li>
+                <li>• Fotografiere seit 2014 mit einer Spiegelreflexkamera</li>
+                <li>• Beschäftigte mich seit 2018 mit professionellen Bildbearbeitungsprogrammen; wie Lightroom oder Photoshop</li>
+                <li>• Kreativ, naturliebend, weltoffen und durch meine Langzeitreisen von unterschiedlichen Kulturen und Menschen inspiriert und begeistert</li>
+                <li>• Liebe es zu zeichnen, zu gärtnern, meine Zimmerpflanzen, Second Hand, Flohmärkte und Upcycling</li>
+                <li>• Habe zwei Katzen als Haustiere</li>
+            </ul>
+            <p>Fotografie ist für mich weit mehr als nur ein Beruf — es ist eine lebendige Leidenschaft, die mein Herz erfüllt. Meine Reise begann in der Natur, wo ich die Schönheit und Vielfalt unserer Umgebung für mich entdeckte. Mit der Zeit fand ich meine Leidenschaft in der Portraitfotografie. Hier kann ich Menschen, Tiere und besondere Momente in ihrer ganzen Pracht einfangen. Jedes Bild, das ich aufnehme, erzählt eine Geschichte von Individualismus, Liebe, und der Magie des Lebens. Mein Ziel ist es, nicht nur Fotos zu machen, sondern lebendige Erinnerungen zu schaffen, die ein Leben lang bewahrt werden. Mit einem ausgeprägten Blick für Details und einer tiefen Verbundenheit zur Natur entstehen Aufnahmen, die die Schönheit unserer Welt und deine Persönlichkeit in all ihren Facetten einfangen. Ob Einzelportraits, Familien, Paare, Neugeborene oder unsere treuen Vierbeiner - jedes Fotoshooting ist eine gemeinsame Reise voller Entdeckungen. Ich freue mich darauf, dich mit meiner Kamera zu begleiten und deine einzigartige Geschichte festzuhalten.</p>
+        </div>
+    </section>
+
+    <!-- My Workflow Section -->
+    <section id="workflow" class="section hidden">
+        <h2>Meine Arbeitsweise</h2>
+        <p>Fotografie ist für mich weit mehr als nur ein Beruf — es ist eine lebendige Leidenschaft, die mein Herz erfüllt. Meine Reise begann in der Natur, wo ich die Schönheit und Vielfalt unserer Umgebung für mich entdeckte. Mit der Zeit fand ich meine Leidenschaft in der Portraitfotografie. Hier kann ich Menschen, Tiere und besondere Momente in ihrer ganzen Pracht einfangen. Jedes Bild, das ich aufneh
